@@ -170,6 +170,67 @@ class ProxyFetcher(object):
         except Exception as e:
             print(e)
 
+    @staticmethod
+    def mmpx12_http():
+        """https://github.com/mmpx12/proxy-list/"""
+        r = WebRequest().get("https://raw.kkgithub.com/mmpx12/proxy-list/master/http.txt", timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def mmpx12_https():
+        """https://github.com/mmpx12/proxy-list/"""
+        r = WebRequest().get("https://raw.kkgithub.com/mmpx12/proxy-list/master/https.txt", timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def prxchk_http():
+        """https://github.com/prxchk/proxy-list/"""
+        r = WebRequest().get("https://raw.kkgithub.com/prxchk/proxy-list/main/http.txt", timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def casals_ar_http():
+        """https://github.com/casals-ar/proxy-list"""
+        r = WebRequest().get("https://raw.kkgithub.com/casals-ar/proxy-list/main/http", timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def casals_ar_https():
+        """https://github.com/casals-ar/proxy-list"""
+        r = WebRequest().get("https://raw.kkgithub.com/casals-ar/proxy-list/main/https", timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
+    @staticmethod
+    def proxifly_http():
+        """https://github.com/proxifly/free-proxy-list/"""
+        r = WebRequest().get("https://raw.kkgithub.com/proxifly/free-proxy-list/main/proxies/protocols/http/data.txt",
+                             timeout=10)
+        try:
+            for each in r.text.split("\n"):
+                yield each
+        except Exception as e:
+            print(e)
+
     # @staticmethod
     # def wallProxy01():
     #     """
